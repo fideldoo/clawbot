@@ -8,9 +8,11 @@ RUN apt-get update \
     gosu \
     procps \
     python3 \
+    python3-pip \
     build-essential \
     zip \
   && rm -rf /var/lib/apt/lists/*
+RUN pip3 install notebooklm-py
 
 RUN npm install -g openclaw@v2026.3.11
 
