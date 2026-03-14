@@ -11,8 +11,8 @@ RUN apt-get update \
     build-essential \
     zip \
   && rm -rf /var/lib/apt/lists/*
-RUN pip3 install notebooklm-py --break-system-packages
-RUN pip3 install "notebooklm-py[browser]" --break-system-packages
+RUN pip3 install podcastfy --break-system-packages
+RUN pip3 install edge-tts --break-system-packages
 RUN python3 -m playwright install chromium
 RUN python3 -m playwright install-deps chromium
 RUN npm install -g openclaw@v2026.3.11
